@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: meu-app
+  name: kubernetes-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: meu-app
+      app: kubernetes-app
   template:
     metadata:
       labels:
-        app: meu-app
+        app: kubernetes-app
     spec:
       containers:
-      - name: meu-container
-        image: khalelalbuqq/meu-app:latest
+      - name: kubernetes-container
+        image: khalelalbuqq/kubernetes-container:latest
         ports:
         - containerPort: 3031
